@@ -1,0 +1,1 @@
+export { usePageSearch } from './usePageSearch'
