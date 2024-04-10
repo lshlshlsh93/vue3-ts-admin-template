@@ -1,0 +1,37 @@
+
+// fix: input的icon显示异常
+.el-input__prefix-inner {
+	display: flex;
+	align-items: center;
+}
+
+// fix:左侧导航栏icon显示位置异常
+.el-sub-menu .el-sub-menu__icon-arrow {
+	top: auto;
+	margin: 0;
+}
+
+// 框架padding
+.el-main {
+	padding: 0;
+}
+.el-aside {
+	overflow: hidden;
+}
+
+// 使得时间选择器鼠标手指
+.el-date-editor .el-range-input {
+	cursor: pointer;
+}
+
+// 按钮文字间距
+.el-button {
+	letter-spacing: 2px;
+}
+
+// 修改页面的el-card样式,使其与tab对齐
+.page-container.el-card {
+	border-radius: 0%;
+	border: none;
+}
+

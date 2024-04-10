@@ -1,0 +1,37 @@
+/* 框架变量 */
+.layout-class {
+    /* 头部宽度 */
+    --header-height: 50px;
+    /* 侧边栏宽度 */
+    --sidebar-width: 170px;
+    --sidebar-hide-width: 54px;
+    /* Tab高度 */
+    --tab-height: 40px;
+}
+
+/* 头部变量 */
+.header-class {
+    /* 头部背景颜色 */
+    --bg-color-write: #ffffff;
+    /* 头部底部边框颜色 */
+    --border-bottom-color: #eeeeee;
+}
+
+/* 左侧导航栏变量 */
+.sidebar-class {
+    /* 导航栏背景颜色 */
+    --side-bg-color: #ffffff;
+    --side-bg-hover: #ffffff;
+    --side-bg-active: #1A5EFF;
+    /* 文本颜色 */
+    --side-font-color: #666666;
+    --side-active-font-color: #1A5EFF;
+    /* 文本大小 */
+    --side-font-side: 14px;
+    --side-sub-font-size: 12px;
+}
+
+:root {
+    --primary-color: #1A5EFF;
+    --el-color-primary: #1A5EFF;
+}

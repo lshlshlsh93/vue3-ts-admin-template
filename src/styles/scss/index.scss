@@ -1,0 +1,11 @@
+@import './element-ui.scss';
+@import './element-menu.scss';
+
+// 面包屑样式
+.bread-crumb {
+  display: flex;
+  height: 30px;
+  .el-icon {
+    margin-right: 4px;
+  }
+}
