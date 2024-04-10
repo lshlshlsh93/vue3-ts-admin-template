@@ -8,7 +8,7 @@ import '@/styles/css/index.css'
 import '@/styles/scss/index.scss'
 
 // 移动端适配
-import '@/utils/application/flexable.ts';
+import '@/utils/application/flexable';
 
 // 初始化element
 import initElement from './plugins/element';
