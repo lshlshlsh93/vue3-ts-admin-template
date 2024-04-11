@@ -4,6 +4,7 @@ import { defineConfig, ConfigEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import VueDevTools from 'vite-plugin-vue-devtools'
+import { viteMockServe } from 'vite-plugin-mock'
 
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
@@ -33,12 +34,22 @@ export default defineConfig(({ command }: ConfigEnv) => ({
     vue(),
     vueJsx(),
     VueDevTools(),
+    // 引入mock
+    viteMockServe({
+      mockPath: './src/mock',
+      watchFiles: true,
+      enable: true
+      // injectCode: `
+      //     import { setupMockServer } from './src/mock/index';
+      //     setupMockServer();
+      //   `,
+    }),
     AutoImport({
       // 自动导入 Vue 相关函数，如：ref, reactive, toRef 等
       imports: ['vue'],
       // 自动导入 Element Plus 相关函数，如：ElMessage, ElMessageBox... (带样式)
       resolvers: [ElementPlusResolver()],
-      dts: path.resolve(pathSrc, 'auto-imports.d.ts'),
+      dts: path.resolve(pathSrc, 'auto-imports.d.ts')
     }),
     Components({
       resolvers: [

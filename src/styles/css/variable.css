@@ -7,6 +7,16 @@
     --sidebar-hide-width: 54px;
     /* Tab高度 */
     --tab-height: 40px;
+    /* 面包屑高度 */
+    --bread-crumb-height: 30px;
+    /* tab高度 */
+    --tab-height-small: 30px;
+    --tab-height-medium: 50px;
+    --tab-height-large: 100px;
+    /* tab外边距 */
+    --tab-margin-small: 30px;
+    --tab-margin-medium: 50px;
+    --tab-margin-large: 100px;
 }
 
 /* 头部变量 */
@@ -34,4 +44,16 @@
 :root {
     --primary-color: #1A5EFF;
     --el-color-primary: #1A5EFF;
+
+    /* 背景颜色 */
+    --background-color-1: #f5f7fa;
+    --background-color-2: #1f1f8f;
+    --background-color-3: #f33709;
+    --background-color-4: #e8bd0e;
+    --background-color-5: #1f070c;
+    --background-color-6: #04c6f6;
+    --background-color-7: #07f607;
+    --background-color-8: #600ae1;
+    --background-color-9: #8b10de;
+
 }

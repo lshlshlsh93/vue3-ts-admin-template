@@ -1,15 +1,16 @@
 <script setup lang="ts">
 import CustomHeader from './components/header/index.vue'
 import CustomAside from './components/aside/index.vue'
-import { useApplication } from '@/stores';
+import Breadcrumb from './components/breadcrumb/index.vue'
+import { useApplication } from '@/stores'
 
-const appStore = useApplication();
+const appStore = useApplication()
 const classObj = computed(() => {
   return {
     hideSidebar: !appStore.sidebarOpened,
     openSidebar: appStore.sidebarOpened
-  };
-});
+  }
+})
 </script>
 
 <template>
@@ -24,8 +25,7 @@ const classObj = computed(() => {
       <el-main class="layout-main">
 
         <div class="bread-crumb">
-          <el-icon><location-filled /></el-icon>
-          BreadCrumb
+          <Breadcrumb />
         </div>
 
         <router-view v-slot="{ Component }">

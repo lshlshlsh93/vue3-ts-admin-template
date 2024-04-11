@@ -10,7 +10,15 @@
     <div class="content-wrapper">
       <el-scrollbar noresize ref="scrollbarRef" @scroll="handleScroll">
         <div class="content">
-          Content
+          <div class="router-item active">
+            <span>首页</span>
+          </div>
+          <div class="router-item">
+            <span>组件</span>
+          </div>
+          <div class="router-item">
+            <span>系统设置</span>
+          </div>
         </div>
       </el-scrollbar>
     </div>
@@ -26,6 +34,8 @@
 
 <script setup lang="ts">
 import type { ElScrollbar } from 'element-plus'
+
+
 
 const scrollbarRef = ref<InstanceType<typeof ElScrollbar>>()
 let scrollNum = 0

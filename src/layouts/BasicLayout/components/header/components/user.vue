@@ -27,17 +27,30 @@
 
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
+import { useUser } from '@/stores'
+import type { BackendServiceResult } from '@/hooks/content/types'
+import { ElMessage } from 'element-plus'
 
 const router = useRouter()
+const userStore = useUser()
+const { logoutAction } = userStore
 
 const handleCommand = (command: string) => {
   switch (command) {
     case 'logout':
-      // TODO: 利用pinia实现用户退出登录
-      router.replace('/login')
+      // FIXME: 优化pinia实现用户退出登录逻辑
+      logoutAction()
+        .then((response: BackendServiceResult) => {
+          if (response.code === 200) {
+            ElMessage.success(response.message)
+            router.replace('/login')
+          }
+        }).catch(err => {
+        console.log(err)
+      })
       break
     case 'user':
-      router.push('/personCenter')
+      router.push('/personCenter/baseInfo')
       break
   }
 }

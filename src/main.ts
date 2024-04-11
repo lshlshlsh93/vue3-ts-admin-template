@@ -1,19 +1,19 @@
 import { createApp } from 'vue'
 
 import App from './App.vue'
-import router from './router'
-
 // css
 import '@/styles/css/index.css'
 import '@/styles/scss/index.scss'
 
 // 移动端适配
-import '@/utils/application/flexable';
+import '@/utils/application/flexable'
 
 // 初始化element
-import initElement from './plugins/element';
+import initElement from './plugins/element'
 // 注册全局状态数据
 import { setupStore } from './stores'
+// 注册路由数据
+import { setupRouter } from './router'
 
 const app = createApp(App)
 
@@ -24,5 +24,5 @@ console.log(import.meta.env.VITE_APP_URL)
 
 app.use(initElement)
 app.use(setupStore)
-app.use(router)
+app.use(setupRouter)
 app.mount('#app')
