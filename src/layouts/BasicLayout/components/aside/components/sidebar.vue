@@ -24,7 +24,7 @@ const { firstRoutes } = permissionStore
 
 // 获取完整path
 const resolvePath = () => {
-  return firstRoutes.path
+  return firstRoutes?.path
 }
 
 // 获取当前路径

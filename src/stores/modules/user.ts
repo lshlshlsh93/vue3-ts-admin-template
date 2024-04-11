@@ -25,9 +25,8 @@ export const userStore = defineStore({
     async logoutAction() {
       this.CLEAR_TOKEN()
       const backendServiceResult = await useLogoutApi()
-      return new Promise(resolve => {
-        resolve(backendServiceResult)
-      })
+      // FIXME: do other logic
+      console.log(backendServiceResult)
     }
   },
   getters: {}

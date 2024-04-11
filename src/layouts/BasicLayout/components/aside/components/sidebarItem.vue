@@ -28,7 +28,7 @@ interface IRouteType {
   redirect?: string;
   hidden?: boolean;
   component?: RouteComponent;
-  meta?: IRouterData;
+  meta?: any;
   children?: any;
 }
 interface IProps {

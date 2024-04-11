@@ -31,3 +31,23 @@ declare module 'vue-router' {
     permission?: string[]
   }
 }
+
+export interface IRouterData {
+  id: string;
+  code: string;
+  url: string;
+  name: string;
+  level: number;
+  parent_id: string;
+  [key: string]: any;
+}
+
+export interface IRouteType {
+  path: string;
+  name: string;
+  redirect?: string;
+  hidden?: boolean;
+  component?: RouteComponent;
+  meta?: IRouterData;
+  children?: any;
+}

@@ -73,7 +73,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import type { ElForm } from 'element-plus'
+import { ElForm } from 'element-plus'
 import type { ILogin } from '@/views/login/index.vue'
 
 interface ILoginProps {
@@ -104,7 +104,7 @@ const handleValueChange = (value: string, field: string) => {
   emit('update:modelValue', { ...props.modelValue, [field]: value })
 }
 // 修改是否自动登录
-const handleSessionChange = (value: boolean) => {
+const handleSessionChange = (value: any) => {
   emit('update:isSession', value)
 }
 

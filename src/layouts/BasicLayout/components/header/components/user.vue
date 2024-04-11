@@ -40,14 +40,7 @@ const handleCommand = (command: string) => {
     case 'logout':
       // FIXME: 优化pinia实现用户退出登录逻辑
       logoutAction()
-        .then((response: BackendServiceResult) => {
-          if (response.code === 200) {
-            ElMessage.success(response.message)
-            router.replace('/login')
-          }
-        }).catch(err => {
-        console.log(err)
-      })
+      router.replace('/login')
       break
     case 'user':
       router.push('/personCenter/baseInfo')

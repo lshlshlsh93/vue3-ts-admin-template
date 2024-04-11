@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import type { IRouteType } from '@/router/typings'
 
 export const permissionStore = defineStore({
   id: 'app-permission',
@@ -6,19 +7,19 @@ export const permissionStore = defineStore({
     /**
      * 权限筛选后的路由信息
      */
-    authRoutes: [],
+    authRoutes: [] as IRouteType[],
     /**
      * 左侧导航栏路由信息
      */
-    sidebarRoutes: [],
+    sidebarRoutes: [] as IRouteType[],
     /**
      * tab路由信息
      */
-    tabRoutes: [],
+    tabRoutes: [] as IRouteType[],
     /**
      * 一级路由信息
      */
-    firstRoutes: {}
+    firstRoutes: {} as IRouteType
   }),
   actions: {},
   getters: {}
